@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 244 100% 98%;
+    --foreground: 240 52% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 52% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 52% 9%;
+
+    --primary: 255 96% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 248 100% 94%;
+    --secondary-foreground: 240 52% 9%;
+
+    --muted: 248 100% 94%;
+    --muted-foreground: 240 33% 53%;
+
+    --accent: 340 100% 68%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 246 48% 92%;
+    --input: 249 100% 98%;
+    --ring: 255 96% 67%;
+
+    --radius: 0.875rem;
+
+    /* Portfolio custom tokens */
+    --portfolio-purple: 255 96% 67%;
+    --portfolio-pink: 346 100% 68%;
+    --portfolio-teal: 166 100% 45%;
+    --portfolio-orange: 28 100% 63%;
+    --portfolio-blue: 214 100% 65%;
+    --portfolio-red: 0 100% 71%;
+    --portfolio-surface: 0 0% 100%;
+    --portfolio-subtle: 248 100% 94%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 67% 5%;
+    --foreground: 240 100% 96%;
+
+    --card: 240 52% 11%;
+    --card-foreground: 240 100% 96%;
+
+    --popover: 240 52% 11%;
+    --popover-foreground: 240 100% 96%;
+
+    --primary: 255 96% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 41% 16%;
+    --secondary-foreground: 240 100% 96%;
+
+    --muted: 240 41% 16%;
+    --muted-foreground: 240 22% 57%;
+
+    --accent: 346 100% 68%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 100% / 0.05;
+    --input: 240 60% 7%;
+    --ring: 255 96% 67%;
+
+    --portfolio-surface: 240 67% 8%;
+    --portfolio-subtle: 240 41% 16%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-outfit;
+  }
+}
+
+@layer utilities {
+  .glow-text {
+    background: linear-gradient(90deg, #7C5CFC, #FF5E84, #00E5BE, #FF9F43, #4D96FF, #7C5CFC);
+    background-size: 250%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradMove 5s linear infinite;
+  }
+}
+
+@keyframes gradMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: #7C5CFC55; border-radius: 2px; }
