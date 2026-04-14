@@ -4,10 +4,11 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/Amr.Dev/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base:"/Amr.Dev/",
+  
 });

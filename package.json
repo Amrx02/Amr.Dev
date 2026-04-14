@@ -1,11 +1,24 @@
 {
   "name": "amr-portfolio",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
+  "description": "```bash npm install npm run dev ```",
+  "homepage": "https://github.com/Amrx02/Amr.Dev#readme",
+  "bugs": {
+    "url": "https://github.com/Amrx02/Amr.Dev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amrx02/Amr.Dev.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "postcss.config.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
